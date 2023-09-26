@@ -8,7 +8,7 @@ import { Form } from "@/components/Form";
 export default function Home() {
   
   return (
-    <div className=" w-[360px] flex  flex-col justify-center items-center m-4 mt-0">
+    <div className=" w-11/12 flex  flex-col justify-center items-center m-1 mt-0">
       <div className="flex flex-row w-full px-3 items-center mb-6">
         <div className="grow font-semibold">12:30</div>
         <div className="flex flex-row gap-1">

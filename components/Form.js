@@ -32,7 +32,12 @@ export const Form = () => {
     const file = e.target.files[0];
     console.log(file);
     setParsing(true);
-    const reader = new FileReader();
+      const reader = new FileReader();
+      if (file.type !== "application/json") {
+          alert("Please upload a valid JSON file");
+          setParsing(false);
+          return;
+        }
     reader.onload = (e) => {
       setEntriesCount(JSON.parse(e.target.result).length);
       setFileContent(JSON.stringify(JSON.parse(e.target.result), null, 2));
